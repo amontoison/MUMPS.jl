@@ -3,8 +3,7 @@ using SHA
 
 mumps_prefix = "/usr"
 scalapack_prefix = "/usr"
-for (jvar, evar) in ((:mumps_prefix, "MUMPS_PREFIX"),
-                     (:scalapack_prefix, "SCALAPACK_PREFIX"))
+for (jvar, evar) in ((:mumps_prefix, "MUMPS_PREFIX"), (:scalapack_prefix, "SCALAPACK_PREFIX"))
   @eval begin
     try
       $jvar = ENV[$evar]
@@ -26,7 +25,9 @@ try
   global libmumps_path = Libdl.dlpath(libmumps)
   Libdl.dlclose(libmumps)
 catch
-  error("unable to locate libmumps_common.$(Libdl.dlext)... please install MUMPS or set MUMPS_PREFIX")
+  error(
+    "unable to locate libmumps_common.$(Libdl.dlext)... please install MUMPS or set MUMPS_PREFIX",
+  )
 end
 
 @info "" found_libmumps libmumps_path
@@ -65,7 +66,9 @@ if !found_libmumps_simple
   end
   run(`tar zxf $(libmumps_simple_archive)`)
   cd("mumps_simple-$(libmumps_simple_ver)")
-  run(`make mumps_prefix=$mumps_prefix scalapack_libdir=$scalapack_libdir scalapack_libs= blas_libs=`)
+  run(
+    `make mumps_prefix=$mumps_prefix scalapack_libdir=$scalapack_libdir scalapack_libs= blas_libs=`,
+  )
   run(`make install prefix=$prefix`)
   try
     libmumps_simple = Libdl.dlopen(joinpath(libdir, "libmumps_simple.$(Libdl.dlext)"))
