@@ -163,7 +163,7 @@ version = "1.3.0"
 
 [[SCALAPACK32_jll]]
 deps = ["Artifacts", "CompilerSupportLibraries_jll", "JLLWrappers", "Libdl", "MPICH_jll", "OpenBLAS32_jll", "Pkg"]
-git-tree-sha1 = "855ac6ba45671f1f694b8b4c63071b1890391568"
+git-tree-sha1 = "a8310edea25a9875715154a34b20a96865621da3"
 repo-rev = "main"
 repo-url = "https://github.com/amontoison/SCALAPACK32_jll.jl.git"
 uuid = "aabda75e-bfe4-5a37-92e3-ffe54af3c273"
