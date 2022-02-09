@@ -90,8 +90,8 @@ uuid = "7cb0a576-ebde-5e09-9194-50597f1243b4"
 version = "4.0.0+0"
 
 [[MUMPS_jll]]
-deps = ["Artifacts", "CompilerSupportLibraries_jll", "JLLWrappers", "Libdl", "METIS_jll", "MPICH_jll", "OpenBLAS32_jll", "Pkg", "SCALAPACK32_jll"]
-git-tree-sha1 = "b9b8a62c08bc21d5a8c0ff1dc4c96b91f42fd949"
+deps = ["Artifacts", "CompilerSupportLibraries_jll", "JLLWrappers", "Libdl", "METIS_jll", "MPICH_jll", "OpenBLAS32_jll", "PARMETIS_jll", "Pkg", "SCALAPACK32_jll", "SCOTCH_jll"]
+git-tree-sha1 = "5792f8ca54cab47ac07ea305b1e8393dd31a60b2"
 repo-rev = "main"
 repo-url = "https://github.com/amontoison/MUMPS_jll.jl.git"
 uuid = "ca64183c-ec4f-5579-95d5-17e128c21291"
@@ -129,6 +129,12 @@ git-tree-sha1 = "6340586e076b2abd41f5ba1a3b9c774ec6b30fde"
 uuid = "fe0851c0-eecd-5654-98d4-656369965a5c"
 version = "4.1.2+0"
 
+[[PARMETIS_jll]]
+deps = ["Artifacts", "JLLWrappers", "Libdl", "METIS_jll", "MPICH_jll", "Pkg"]
+git-tree-sha1 = "cc66527f8f8f985fa035c547aa3c64eb6f115549"
+uuid = "b247a4be-ddc1-5759-8008-7e02fe3dbdaa"
+version = "4.0.4+0"
+
 [[Pkg]]
 deps = ["Artifacts", "Dates", "Downloads", "LibGit2", "Libdl", "Logging", "Markdown", "Printf", "REPL", "Random", "SHA", "Serialization", "TOML", "Tar", "UUIDs", "p7zip_jll"]
 uuid = "44cfe95a-1eb2-52ea-b672-e2afdf69b78f"
@@ -162,6 +168,12 @@ deps = ["Artifacts", "CompilerSupportLibraries_jll", "JLLWrappers", "Libdl", "MP
 git-tree-sha1 = "798e5c4c073e3c6110cf3bbc40377afb54425e4b"
 uuid = "aabda75e-bfe4-5a37-92e3-ffe54af3c273"
 version = "2.2.0+0"
+
+[[SCOTCH_jll]]
+deps = ["Artifacts", "JLLWrappers", "Libdl", "Pkg", "Zlib_jll"]
+git-tree-sha1 = "7110b749766853054ce8a2afaa73325d72d32129"
+uuid = "a8d0f55d-b80e-548d-aff6-1a04c175f0f9"
+version = "6.1.3+0"
 
 [[SHA]]
 uuid = "ea8e919c-243c-51af-8825-aaa63cd721ce"
