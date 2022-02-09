@@ -65,7 +65,7 @@ uuid = "29816b5a-b9ab-546f-933c-edad1886dfa8"
 uuid = "8f399da3-3557-5675-b5ff-fb832c97cbdb"
 
 [[LinearAlgebra]]
-deps = ["Libdl"]
+deps = ["Libdl", "libblastrampoline_jll"]
 uuid = "37e2e46d-f89d-539d-b4ee-838fcccc9c8e"
 
 [[Logging]]
@@ -90,10 +90,12 @@ uuid = "7cb0a576-ebde-5e09-9194-50597f1243b4"
 version = "4.0.0+0"
 
 [[MUMPS_jll]]
-deps = ["Artifacts", "CompilerSupportLibraries_jll", "JLLWrappers", "Libdl", "METIS_jll", "MPICH_jll", "OpenBLAS32_jll", "PARMETIS_jll", "Pkg", "SCALAPACK32_jll", "SCOTCH_jll"]
-git-tree-sha1 = "26f0cf5dbb9342575a0798046f709c3849e57fef"
+deps = ["Artifacts", "CompilerSupportLibraries_jll", "JLLWrappers", "Libdl", "METIS_jll", "MPICH_jll", "OpenBLAS32_jll", "Pkg", "SCALAPACK32_jll"]
+git-tree-sha1 = "b9b8a62c08bc21d5a8c0ff1dc4c96b91f42fd949"
+repo-rev = "main"
+repo-url = "https://github.com/amontoison/MUMPS_jll.jl.git"
 uuid = "ca64183c-ec4f-5579-95d5-17e128c21291"
-version = "5.4.2+1"
+version = "5.4.3+0"
 
 [[Markdown]]
 deps = ["Base64"]
@@ -121,17 +123,15 @@ git-tree-sha1 = "ba4a8f683303c9082e84afba96f25af3c7fb2436"
 uuid = "656ef2d0-ae68-5445-9ca0-591084a874a2"
 version = "0.3.12+1"
 
+[[OpenBLAS_jll]]
+deps = ["Artifacts", "CompilerSupportLibraries_jll", "Libdl"]
+uuid = "4536629a-c528-5b80-bd46-f80d51c5b363"
+
 [[OpenMPI_jll]]
 deps = ["Artifacts", "CompilerSupportLibraries_jll", "JLLWrappers", "LazyArtifacts", "Libdl", "Pkg"]
 git-tree-sha1 = "6340586e076b2abd41f5ba1a3b9c774ec6b30fde"
 uuid = "fe0851c0-eecd-5654-98d4-656369965a5c"
 version = "4.1.2+0"
-
-[[PARMETIS_jll]]
-deps = ["Artifacts", "JLLWrappers", "Libdl", "METIS_jll", "MPICH_jll", "Pkg"]
-git-tree-sha1 = "cc66527f8f8f985fa035c547aa3c64eb6f115549"
-uuid = "b247a4be-ddc1-5759-8008-7e02fe3dbdaa"
-version = "4.0.4+0"
 
 [[Pkg]]
 deps = ["Artifacts", "Dates", "Downloads", "LibGit2", "Libdl", "Logging", "Markdown", "Printf", "REPL", "Random", "SHA", "Serialization", "TOML", "Tar", "UUIDs", "p7zip_jll"]
@@ -152,7 +152,7 @@ deps = ["InteractiveUtils", "Markdown", "Sockets", "Unicode"]
 uuid = "3fa0cd96-eef1-5676-8a61-b3b8758bbffb"
 
 [[Random]]
-deps = ["Serialization"]
+deps = ["SHA", "Serialization"]
 uuid = "9a3f8284-a2c9-5f02-9a11-845980a1fd5c"
 
 [[Requires]]
@@ -168,12 +168,6 @@ repo-rev = "main"
 repo-url = "https://github.com/amontoison/SCALAPACK32_jll.jl.git"
 uuid = "aabda75e-bfe4-5a37-92e3-ffe54af3c273"
 version = "2.2.0+1"
-
-[[SCOTCH_jll]]
-deps = ["Artifacts", "JLLWrappers", "Libdl", "Pkg", "Zlib_jll"]
-git-tree-sha1 = "7110b749766853054ce8a2afaa73325d72d32129"
-uuid = "a8d0f55d-b80e-548d-aff6-1a04c175f0f9"
-version = "6.1.3+0"
 
 [[SHA]]
 uuid = "ea8e919c-243c-51af-8825-aaa63cd721ce"
@@ -206,6 +200,10 @@ uuid = "4ec0a83e-493e-50e2-b9ac-8f72acf5a8f5"
 [[Zlib_jll]]
 deps = ["Libdl"]
 uuid = "83775a58-1f1d-513f-b197-d71354ab007a"
+
+[[libblastrampoline_jll]]
+deps = ["Artifacts", "Libdl", "OpenBLAS_jll"]
+uuid = "8e850b90-86db-534c-a0d3-1478176c7d93"
 
 [[nghttp2_jll]]
 deps = ["Artifacts", "Libdl"]
